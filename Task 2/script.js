@@ -8,6 +8,12 @@ pusėje esančiame "state" skaičiavimo bloke (<div id="btn__state">0</div>)
 const btnEl = document.getElementById('btn__element');
 const btnCount = document.getElementById('btn__state');
 
-btnEl.addEventListener('click' , () => {
-    
+let clicks = 0
+
+btnEl.addEventListener('click' , () => { 
+    function clickCount() {
+        clicks += 1
+        btnCount.innerHTML= clicks
+    }
+    clickCount()
 })
