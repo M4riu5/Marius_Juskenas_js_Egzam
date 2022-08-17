@@ -32,9 +32,9 @@ btnEl.addEventListener('click' , (event) => {
         }
         
      outputEl.className='card'
-        
+        outputEl.innerHTML=''
         let poundText = document.createElement('h2')
-        poundText.textContent=''
+
         poundText.textContent= `Your weight in Pounds ${toPounds(input).toFixed(2)}lb.`
         outputEl.append(poundText)
         
