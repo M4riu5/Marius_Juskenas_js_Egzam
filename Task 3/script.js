@@ -17,5 +17,24 @@ async function getUsers(url) {
     const resp = await fetch(ENDPOINT)
     const data = await resp.json()
     console.log('data ---->', data);
+    createElement(url)
 }
 getUsers()
+
+function createElement(obj) {
+const element = document.createElement('html')
+element.innerHTML=`
+<div class="info">
+              <div class="userinfo">
+                <h2 class="login">Login : mojombo</h2>
+                <h3>
+                  <i class="fa fa-github" aria-hidden="true"></i> :
+                  "https://github.com/mojombo"
+                </h3>
+                <h4>Account Type: "User"</h4>
+              </div>
+              <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="" />
+            </div>
+`
+
+}
