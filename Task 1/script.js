@@ -1,3 +1,5 @@
+'use strict';
+console.log('script.js');
 /* ------------------------------ TASK 1 ----------------------------
 Parašykite JS kodą, kuris leis vartotojui įvesti svorį kilogramais ir
 pamatyti jo pateikto svorio kovertavimą į:
@@ -9,5 +11,7 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
 
-
-// 1. Svarus (lb) | Formulė: lb = kg * 2.2046
+// Nusitaikymai
+const form = document.forms[0]
+const input = document.getElementById('search')
+const btnEl = document.getElementById('submit-btn')
