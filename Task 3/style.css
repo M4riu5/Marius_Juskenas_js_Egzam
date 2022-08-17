@@ -3,10 +3,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-
+.info {
+  display: flex;
+  gap: 50vh;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  justify-content: center;
+  margin-left: 10vh;
+}
+.login {
+  color: red;
+}
 /* Mobile first */
 .wrapper {
   min-height: 100vh;
