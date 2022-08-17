@@ -15,3 +15,21 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 const form = document.forms[0]
 const input = document.getElementById('search')
 const btnEl = document.getElementById('submit-btn')
+
+//Formos sustabdymas
+btnEl.addEventListener('click' , (event) => {
+    event.preventDefault()
+    function toPounds(input) {
+        return input.value*2.2046
+    }
+    console.log('toPounds(input) ---->', toPounds(input));
+    function toGrams(input) {
+        return input.value/0.0010000
+    }
+    console.log('toGrams(input) ---->', toGrams(input));
+    function toOz(input)  {
+        return input.value*35.274
+    }
+    console.log(' toOz(input) ---->',  toOz(input));
+
+})
