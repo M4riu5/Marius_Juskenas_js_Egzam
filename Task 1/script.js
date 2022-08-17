@@ -35,7 +35,7 @@ btnEl.addEventListener('click' , (event) => {
         
         let poundText = document.createElement('h2')
         poundText.textContent=''
-        poundText.textContent= `Your weight in Pounds ${toPounds(input)}lb.`
+        poundText.textContent= `Your weight in Pounds ${toPounds(input).toFixed(2)}lb.`
         outputEl.append(poundText)
         
 
@@ -45,7 +45,7 @@ btnEl.addEventListener('click' , (event) => {
         
 
         const ozText = document.createElement('h2')
-        ozText.textContent= `Your weight in Oz ${toOz(input)}oz.`
+        ozText.textContent= `Your weight in Oz ${toOz(input).toFixed(2)}oz.`
         outputEl.append(ozText)
         
 })
