@@ -19,19 +19,33 @@ const outputEl = document.getElementById('output');
 //Formos sustabdymas
 btnEl.addEventListener('click' , (event) => {
     event.preventDefault()
+
     
     function toPounds(input) {
             return input.value*2.2046
         }
-        console.log('toPounds(input) ---->', toPounds(input));
         function toGrams(input) {
             return input.value/0.0010000
         }
-        console.log('toGrams(input) ---->', toGrams(input));
         function toOz(input)  {
             return input.value*35.274
         }
-        console.log(' toOz(input) ---->',  toOz(input));
+        
+     outputEl.className='card'
+        
+        let poundText = document.createElement('h2')
+        poundText.textContent=''
+        poundText.textContent= `Your weight in Pounds ${toPounds(input)}lb.`
+        outputEl.append(poundText)
+        
 
-    
+        const gramsText = document.createElement('h2')
+        gramsText.textContent= `Your weight in Grams ${toGrams(input)}g.`
+        outputEl.append(gramsText)
+        
+
+        const ozText = document.createElement('h2')
+        ozText.textContent= `Your weight in Oz ${toOz(input)}oz.`
+        outputEl.append(ozText)
+        
 })
