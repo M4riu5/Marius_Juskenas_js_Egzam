@@ -27,5 +27,7 @@ const ArrayWithPuppies = filterDogOwers(users)
 console.log('ArrayWithPuppies ---->', ArrayWithPuppies);
 
 function filterAdults(arr) {
- 
+  return arr.filter(a=>a.age>=18)
 }
+const ArrayWithHumans = filterAdults(users)
+console.log('ArrayWithHumans ---->', ArrayWithHumans);
