@@ -21,9 +21,11 @@ const users = [
 ];
 
 function filterDogOwers(arr) {
-
+    return arr.filter(a=>a.hasDog==true)
 }
+const ArrayWithPuppies = filterDogOwers(users)
+console.log('ArrayWithPuppies ---->', ArrayWithPuppies);
 
 function filterAdults(arr) {
-  asd
+ 
 }
