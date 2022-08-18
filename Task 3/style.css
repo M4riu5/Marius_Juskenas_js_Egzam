@@ -9,6 +9,7 @@
 .info {
   display: flex;
   gap: 50vh;
+  padding: 10vh 0;
 }
 .userinfo {
   display: flex;

@@ -14,7 +14,7 @@ turėti bent minimalų stilių ir būti responsive;
 const ENDPOINT = 'https://api.github.com/users';
 const output = document.getElementById('output');
 const btnEl = document.getElementById('btn');
-
+const shopUsersMessage = document.getElementById('message');
 
 btnEl.addEventListener('click' , () => {
     async function getData() {
@@ -25,7 +25,9 @@ btnEl.addEventListener('click' , () => {
     }
     getData()
 
+    output.innerHTML=''
     function generateUsers(userObj) {
+        shopUsersMessage.remove()
         userObj.forEach(userObj => {
             const infoEl = document.createElement('html')
             infoEl.innerHTML=`
@@ -33,7 +35,7 @@ btnEl.addEventListener('click' , () => {
                   <div class="userinfo">
                     <h2 class="login">Login : ${userObj.login}</h2>
                     <h3>
-                      <i class="fa fa-github" aria-hidden="true"></i> :
+                      <i class="fa fa-github" aria-hidden="true"></i>
                       ${userObj.html_url}
                     </h3>
                     <h4>Account Type: ${userObj.type}</h4>
