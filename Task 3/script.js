@@ -12,19 +12,23 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'https://api.github.com/users';
+const output = document.getElementById('output');
+const btnEl = document.getElementById('btn');
 
-async function getUsers(url) {
-    const resp = await fetch(ENDPOINT)
-    const data = await resp.json()
-    console.log('data ---->', data);
-    createElement(url)
-}
-getUsers()
 
-function createElement(obj) {
-const element = document.createElement('html')
-element.innerHTML=`
-<div class="info">
+btnEl.addEventListener('click' , () => {
+    async function getData() {
+        const resp = await fetch(ENDPOINT)
+        const data = await resp.json()
+        console.log('data ---->', data);
+        generateUsers(data)
+    }
+    getData()
+
+    function generateUsers(userObj) {
+        const infoEl = document.createElement('html')
+        infoEl.innerHTML=`
+        <div class="info">
               <div class="userinfo">
                 <h2 class="login">Login : mojombo</h2>
                 <h3>
@@ -35,6 +39,8 @@ element.innerHTML=`
               </div>
               <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="" />
             </div>
-`
-
-}
+        `
+        
+        output.append(infoEl)
+    }
+})
