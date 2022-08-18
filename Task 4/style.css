@@ -9,21 +9,19 @@
 }
 .card {
   color: rgb(0, 0, 0);
-  background-color: orange;
+  background-color: rgba(14, 110, 255, 0.753);
   border-radius: 20px;
   padding: 20px;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;
+  max-width: 50%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 2vh;
-}
-
 /* Mobile first */
 .wrapper {
   min-height: 100vh;

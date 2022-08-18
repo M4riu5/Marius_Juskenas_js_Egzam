@@ -18,6 +18,19 @@ async function getCars() {
     const resp = await fetch(ENDPOINT)
     const data = await resp.json()
     console.log('data ---->', data);
+    generateList(data)
 }
 getCars()
 
+function generateList(carsObj) {
+    carsObj.forEach(carsObj => {
+        const divCardEl = document.createElement('div')
+    divCardEl.className=('card')
+    divCardEl.innerHTML=`
+    <h2>${carsObj.brand}</h2>
+      <p>${carsObj.models}</p>
+
+    `
+    outputEl.append(divCardEl)
+});
+}
