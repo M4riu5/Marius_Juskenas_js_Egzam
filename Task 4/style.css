@@ -6,16 +6,24 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   list-style-type: none;
-  background-color: rgb(185, 185, 185);
 }
 .card {
-  background-color: tomato;
+  color: rgb(0, 0, 0);
+  background-color: orange;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0.5rem 0;
 }
 .list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 2vh;
 }
+
 /* Mobile first */
 .wrapper {
   min-height: 100vh;
