@@ -10,3 +10,14 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'cars.json';
+// Nusitaikymai
+const outputEl = document.getElementById('output');
+
+//========================
+async function getCars() {
+    const resp = await fetch(ENDPOINT)
+    const data = await resp.json()
+    console.log('data ---->', data);
+}
+getCars()
+
