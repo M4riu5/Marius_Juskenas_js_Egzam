@@ -3,10 +3,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  list-style-type: none;
+  background-color: rgb(185, 185, 185);
 }
-
+.card {
+  background-color: tomato;
+}
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2vh;
+}
 /* Mobile first */
 .wrapper {
   min-height: 100vh;
