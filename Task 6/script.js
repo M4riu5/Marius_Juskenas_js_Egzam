@@ -26,7 +26,8 @@ function getUserAverageAge(array) {
 }
 console.log('getUserAverageAge(array) ---->', getUserAverageAge(users));
 
-
-function getUsersNames() {
-
+function getUsersNames(array) {
+  const mapped = array.map(a=>a.name)
+  return mapped
 }
+console.log('getUsersNames(array) ---->', getUsersNames(users));
