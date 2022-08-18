@@ -28,7 +28,7 @@ function generateList(carsObj) {
     divCardEl.className=('card')
     divCardEl.innerHTML=`
     <h2>${carsObj.brand}</h2>
-      <p>${carsObj.models}</p>
+      <p>${carsObj.models.join(' ')}</p>
 
     `
     outputEl.append(divCardEl)
