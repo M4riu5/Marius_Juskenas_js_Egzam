@@ -10,3 +10,12 @@ const audi = {
   year: 2005,
   color: 'white',
 };
+
+// Funkcija 
+const keys = []
+function showObjectKeys(object) {
+  for (const key in object)
+  keys.push(key)
+}
+showObjectKeys(audi)
+console.log('keys ---->', keys);
