@@ -10,6 +10,7 @@
   display: flex;
   gap: 50vh;
   padding: 10vh 0;
+  flex-wrap: wrap;
 }
 .userinfo {
   display: flex;

@@ -28,3 +28,5 @@ const Pats_Sau_Mil = new Movie('Pats Sau Milijonierius', 'Tadas Vidmantas' , 350
 console.log('Avatar was expensive?', Avatar.wasExpensive());
 console.log('Interstellar was expensive?', Interstellar.wasExpensive());
 console.log('Pats sau Milijonierius was expensive?', Pats_Sau_Mil.wasExpensive());
+
+console.log('new Movie(Avatar) ---->', new Movie('Avatar', 'James Cameron' , 237000000));
