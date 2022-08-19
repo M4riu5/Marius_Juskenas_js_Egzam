@@ -10,3 +10,14 @@ const audi = {
   year: 2005,
   color: 'white',
 };
+
+// Funkcija 
+const keys = []
+function showObjectKeys(object) {
+  for (const key in object)
+  keys.push(key)
+}
+showObjectKeys(audi)
+console.log('keys ---->', keys);
+
+// Cia kazkodel rodo kitaip bet parefreshinus page rodo normaliai nesupratau ar cia pas mane su narsykle ar kazka busiu blogai parases :)
