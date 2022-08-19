@@ -25,12 +25,16 @@ getCars()
 function generateList(carsObj) {
     carsObj.forEach(carsObj => {
         const divCardEl = document.createElement('div')
+        const pEl = document.createElement('p')
+        pEl.className=('brands')
     divCardEl.className=('card')
     divCardEl.innerHTML=`
     <h2>${carsObj.brand}</h2>
-      <p>${carsObj.models.join(' ')}</p>
-
     `
+    pEl.innerHTML=`
+    ${carsObj.models.join(', ')}
+    `
+    divCardEl.append(pEl)
     outputEl.append(divCardEl)
 });
 }
