@@ -29,19 +29,24 @@ btnEl.addEventListener('click' , () => {
     function generateUsers(userObj) {
         shopUsersMessage.remove()
         userObj.forEach(userObj => {
-            const infoEl = document.createElement('html')
+            const infoEl = document.createElement('div')
             infoEl.innerHTML=`
-            <div class="info">
-                  <div class="userinfo">
-                    <h2 class="login">Login : ${userObj.login}</h2>
-                    <h3>
-                      <i class="fa fa-github" aria-hidden="true"></i>
-                      ${userObj.html_url}
-                    </h3>
-                    <h4>Account Type: ${userObj.type}</h4>
-                  </div>
-                  <img src="${userObj.avatar_url}" alt="" />
-                </div>
+            <div class="card">
+              <img
+                src="${userObj.avatar_url}"
+                alt="Person"
+                class="card__image"
+              />
+              <p class="card__name">${userObj.login}</p>
+              <ul class="social-icons">
+                <li>
+                  <a href="${userObj.html_url}"><i class="fa fa-github"></i></a>
+                </li>
+              </ul>
+             
+
+            </div>
+
             `
             
             output.append(infoEl)

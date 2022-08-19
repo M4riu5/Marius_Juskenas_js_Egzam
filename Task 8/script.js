@@ -6,6 +6,19 @@ multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
 division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
 
+function CalculatorAnother(a,b){
+    this.sum = a+b
+    this.subtraction = a-b
+    this.multiplication = a*b
+    this.division = a/b
+}
+
+
+const sum1 = new CalculatorAnother(9 , 4)
+console.log('sum1 ---->', sum1);
+
+
+//=============================================================
 function Calculator(a,b) {
     this.a = a
     this.b = b
@@ -33,16 +46,3 @@ console.log('sum ---->', suma.sum());
 console.log('sum ---->', suma.subtraction());
 console.log('sum ---->', suma.multiplication());
 console.log('sum ---->', suma.division());
-
-
-//=============================================================
-function CalculatorAnother(a,b){
-    this.sum = a+b
-    this.subtraction = a-b
-    this.multiplication = a*b
-    this.division = a/b
-}
-
-
-const sum1 = new CalculatorAnother(9 , 4)
-console.log('sum1 ---->', sum1);
